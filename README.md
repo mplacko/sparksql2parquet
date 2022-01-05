@@ -1,5 +1,5 @@
 # sparksql2parquet
-An example for reading (quering) and writing a parquet file
+An example for reading (querying) and writing a parquet file
 
 ### HOW TO CONFIGURE THE PROJECT
 - `sparksql2parquet.sh`
