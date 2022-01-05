@@ -22,4 +22,4 @@ mvn clean install
 ```
 
 ### Submit to Spark cluster
-For running spark application see shell scripts inside `/scripts` dir.
+For running spark application see shell script inside `/scripts` dir.
