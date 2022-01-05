@@ -10,13 +10,13 @@ appArtifact="/<REPLACE>/sparksql2parquet-$appVersion.jar /user/<REPLACE>/sparksq
 ```
 - `INPUT`
 ```sh
-/user/<REPLACE>/sparksql2parquet/episodes.parquet
+HDFS: /user/<REPLACE>/sparksql2parquet/episodes.parquet
 parquet location: \src\main\resources
 avro source: downloaded from https://github.com/apache/hive/blob/master/data/files/episodes.avro
 ```
 - `OUTPUT`
 ```sh
-/user/<REPLACE>/sparksql2parquet/episodes_titles_only.parquet
+HDFS: /user/<REPLACE>/sparksql2parquet/episodes_titles_only.parquet
 ```
 
 ## Building and Running
