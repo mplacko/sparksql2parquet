@@ -7,7 +7,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Marian Placko</name>
-    <description>An example for reading (quering) and writing a parquet file</description>
+    <description>An example for reading (quering) and writing a parquet file and creating hive table</description>
 	<properties>
 		<revision>Local-SNAPSHOT</revision>
 		<maven.compiler.source>8</maven.compiler.source>

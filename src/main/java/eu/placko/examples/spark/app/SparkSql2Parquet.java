@@ -8,6 +8,7 @@ import org.apache.spark.sql.SaveMode;
 
 import eu.placko.examples.spark.config.SparkConfig;
 import eu.placko.examples.spark.sql.QueryBuilder;
+import eu.placko.examples.spark.sql.HiveBuilder;
 
 public class SparkSql2Parquet {
 	private final static Logger LOGGER = Logger.getLogger(SparkSql2Parquet.class.getName());
@@ -34,5 +35,17 @@ public class SparkSql2Parquet {
 			.mode(SaveMode.Overwrite)
 			.parquet(path + "episodes_titles_only.parquet");
 		LOGGER.info("Written to the new parquet");
+		
+		String hive = new HiveBuilder().buildDB();
+		sparkSession.sql(hive);
+		LOGGER.info("Created Hive DB if not exists");
+		
+		hive = new HiveBuilder().buildTB();
+		sparkSession.sql(hive);
+		LOGGER.info("Dropped Hive table if exists");
+		
+		hive = new HiveBuilder().buildTB(path);
+		sparkSession.sql(hive);
+		LOGGER.info("Created Hive table over the parquet");
 	}
 }

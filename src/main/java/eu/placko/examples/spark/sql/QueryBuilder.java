@@ -10,11 +10,9 @@ public class QueryBuilder {
 
 	public String build() {
 		String sql = "SELECT title FROM tmp_episodes";
-		
 		if (limit != null && limit.longValue() > 0) {
 			sql = sql + " limit " + limit;
 		}
-		
 		return sql;
 	}
 }
